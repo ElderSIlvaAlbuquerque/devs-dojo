@@ -98,7 +98,7 @@ gh pr checkout <number>         # Checkout PR locally
 
 **Core Ideas**:
 
-**1. Adding a Remote**
+#### 1. Adding a Remote
 
 ```bash
 # Create repo on GitHub first, then:
@@ -111,7 +111,7 @@ git remote -v
 # origin  https://github.com/username/repo.git (push)
 ```
 
-**2. First Push**
+#### 2. First Push
 
 ```bash
 git push -u origin main
@@ -119,7 +119,7 @@ git push -u origin main
 # Now 'git push' will push to origin/main automatically
 ```
 
-**3. Pulling Changes**
+#### 3. Pulling Changes
 
 ```bash
 git pull origin main
@@ -152,7 +152,7 @@ Every professional team uses remote repositories. Understanding push/pull is fun
 
 **Core Ideas**:
 
-**1. Creating a PR**
+#### 1. Creating a PR
 
 ```bash
 # 1. Create feature branch
@@ -169,7 +169,7 @@ git push -u origin feature/user-auth
 # Go to GitHub → "Compare & pull request"
 ```
 
-**2. Good PR Description Template**
+#### 2. Good PR Description Template
 
 ```markdown
 ## What
@@ -197,7 +197,7 @@ How to test these changes
 - [ ] No breaking changes
 ```
 
-**3. Code Review Process**
+#### 3. Code Review Process
 
 ```
 1. Reviewer examines code
@@ -231,7 +231,7 @@ PRs are how professional teams review and improve code quality before it reaches
 
 **Core Ideas**:
 
-**1. What Causes Conflicts**
+#### 1. What Causes Conflicts
 
 ```
 Alice and Bob both edit line 5 of server.js
@@ -241,7 +241,7 @@ Bob:   const port = 8080
 When Bob tries to merge Alice's changes → CONFLICT!
 ```
 
-**2. Resolving Conflicts**
+#### 2. Resolving Conflicts
 
 ```bash
 # After merge conflict:
@@ -265,7 +265,7 @@ git add server.js
 git commit
 ```
 
-**3. Using Merge Tools**
+#### 3. Using Merge Tools
 
 ```bash
 # Configure merge tool
@@ -299,7 +299,8 @@ Conflicts are inevitable when multiple people work on the same codebase. Knowing
 
 **Core Ideas**:
 
-**1. Why Protect Main?**
+#### 1. Why Protect Main?
+
 Protecting main prevents:
 
 - Accidental direct commits
@@ -307,7 +308,7 @@ Protecting main prevents:
 - Deploying untested code
 - Overwriting others' work
 
-**2. Common Protection Rules**
+#### 2. Common Protection Rules
 
 ```
 ✅ Require pull request before merging
@@ -318,7 +319,7 @@ Protecting main prevents:
 ✅ Block deletions
 ```
 
-**3. Setting Up Protection (GitHub)**
+#### 3. Setting Up Protection (GitHub)
 
 ```
 1. Repo Settings → Branches
@@ -331,7 +332,7 @@ Protecting main prevents:
 4. Save changes
 ```
 
-**4. Working with Protected Branches**
+#### 4. Working with Protected Branches
 
 ```bash
 # ❌ This will fail on protected main:
@@ -379,7 +380,7 @@ With protection:
 
 **Core Ideas**:
 
-**1. What to Look For**
+#### 1. What to Look For
 
 ```
 ✅ Correctness: Does it work?
@@ -390,7 +391,7 @@ With protection:
 ✅ Style: Follows team conventions?
 ```
 
-**2. Giving Feedback**
+#### 2. Giving Feedback
 
 ```markdown
 ❌ Bad: "This is wrong"
@@ -403,7 +404,7 @@ With protection:
 ✅ Good: "Suggestion: Extract this into a helper function for reusability"
 ```
 
-**3. Prefixes for Comments**
+#### 3. Prefixes for Comments
 
 ```
 [nit]: Minor style suggestion (not blocking)
@@ -412,7 +413,7 @@ With protection:
 [blocking]: Must be addressed before merge
 ```
 
-**4. Review Checklist**
+#### 4. Review Checklist
 
 ```markdown
 - [ ] Code builds successfully
@@ -449,7 +450,7 @@ Code review is how teams share knowledge, maintain quality, and catch bugs befor
 
 **Core Ideas**:
 
-**1. GitHub Flow (Simple)**
+#### 1. GitHub Flow (Simple)
 
 ```
 main (always deployable)
@@ -467,7 +468,7 @@ Workflow:
 
 **Best for**: Small teams, continuous deployment
 
-**2. GitFlow (Structured)**
+#### 2. GitFlow (Structured)
 
 ```
 main (production)
@@ -488,7 +489,7 @@ Workflow:
 
 **Best for**: Scheduled releases, large teams
 
-**3. Trunk-Based Development**
+#### 3. Trunk-Based Development
 
 ```
 main (trunk)
