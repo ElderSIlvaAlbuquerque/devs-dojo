@@ -10,6 +10,7 @@
 This is a simplified, modular framework for tracking software engineering skill progression. It focuses on **universal software engineering concepts** (language-agnostic), with optional **style schools** for language-specific mastery.
 
 ### Core Concept
+
 - **Core Belts**: Universal software engineering knowledge (applies to ANY language)
 - **Style Schools**: Language/tech-specific implementation
 - **Dans**: Post-Black Belt specializations (Principal Engineer level)
@@ -18,7 +19,7 @@ This is a simplified, modular framework for tracking software engineering skill 
 
 ## Directory Structure
 
-```
+``` bash
 engineer-dojo/
 ├── README.md                           # Main documentation
 ├── STRUCTURE.md                        # This file - guide for generators
@@ -73,9 +74,11 @@ engineer-dojo/
 ## Belt Progression (7 Core Belts + 3 Dans)
 
 ### **01-White-Belt 🕊️ (Week 1-2)**
+
 **Level**: Junior Developer (Year 0-1)
 
 #### Lessons to Learn
+
 - Fundamentals of HTTP/REST (status codes, verbs, headers)
 - Version control (Git, branches, commits, PRs)
 - Unit testing basics (what, why, structure)
@@ -83,6 +86,7 @@ engineer-dojo/
 - Database basics (CRUD, relational concepts, SQL SELECT)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Read 1 HTTP concept article (2x/week)
 - [ ] Git workflow: create branch → commit → PR (3x/week)
 - [ ] Write 1 unit test (daily) - start simple (assert x == y)
@@ -90,11 +94,13 @@ engineer-dojo/
 - [ ] Write 1 SQL SELECT query (daily)
 
 #### Capstone Projects (Pick ONE)
+
 - CRUD API with unit tests (Ruby/Go/Node/Python)
 - Local Docker environment with API + database
 - Simple web page (React) connecting to API
 
 #### Promotion Requirements
+
 - [ ] CRUD API working locally (all 4 operations)
 - [ ] ≥5 unit tests with >80% coverage
 - [ ] Docker compose file for local development
@@ -102,6 +108,7 @@ engineer-dojo/
 - [ ] 1 clean git history (meaningful commits)
 
 #### Success Metrics
+
 - Deploy to free tier (Render, Heroku, Railway)
 - Share live URL on LinkedIn
 - Pass code review from peer/senior
@@ -109,9 +116,11 @@ engineer-dojo/
 ---
 
 ### **02-Yellow-Belt 💛 (Week 3-4)**
+
 **Level**: Junior Developer (Year 1-2)
 
 #### Lessons to Learn
+
 - API design best practices (error handling, validation, contracts)
 - Database migrations and schema design
 - Integration testing (with database, external APIs)
@@ -119,6 +128,7 @@ engineer-dojo/
 - Logging and debugging (structured logs, tracing IDs)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Design 1 API endpoint with validation (3x/week)
 - [ ] Write 1 database migration (2x/week)
 - [ ] Write 1 integration test (daily)
@@ -126,12 +136,14 @@ engineer-dojo/
 - [ ] Add structured logging to a function (2x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - Rate-limiting API gateway
 - User authentication system (signup, login, JWT)
 - Todo API with complete CRUD + validation
 - Real-time chat backend (WebSocket basics)
 
 #### Promotion Requirements
+
 - [ ] API with input validation + error handling
 - [ ] Database migrations (create + update operations)
 - [ ] ≥10 integration tests (testing with real DB)
@@ -140,6 +152,7 @@ engineer-dojo/
 - [ ] README documenting API contracts
 
 #### Success Metrics
+
 - Deploy with CI/CD (tests run automatically)
 - Call your own API from frontend/CLI
 - Explain to peer: "Why this validation matters"
@@ -147,9 +160,11 @@ engineer-dojo/
 ---
 
 ### **03-Orange-Belt 🧡 (Week 5-7)**
+
 **Level**: Junior → Mid-level (Year 2-3)
 
 #### Lessons to Learn
+
 - Concurrency patterns (threads, async/await, goroutines, race conditions)
 - Message queues and async processing (Kafka, RabbitMQ, job queues)
 - Prometheus metrics (counters, gauges, histograms, SLIs)
@@ -157,6 +172,7 @@ engineer-dojo/
 - Load testing (simulating realistic traffic)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Solve 2 concurrency problems (3x/week) - LeetCode-style
 - [ ] Add metrics to existing code (2x/week)
 - [ ] Implement exponential backoff retry logic (1x/week)
@@ -164,12 +180,14 @@ engineer-dojo/
 - [ ] Read 1 distributed systems concept (2x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - Event processor (consume Kafka → process → store, 10k events/sec)
 - Job queue system (async task processing)
 - Rate limiter with metrics dashboard
 - Real-time data pipeline (collect → transform → store)
 
 #### Promotion Requirements
+
 - [ ] Handles concurrency without race conditions (verified with tests)
 - [ ] Integrates with message queue (producer + consumer)
 - [ ] Exposes Prometheus metrics (latency, throughput, errors)
@@ -178,6 +196,7 @@ engineer-dojo/
 - [ ] Graceful shutdown + error recovery
 
 #### Success Metrics
+
 - Load test shows p99 latency < 100ms
 - Prometheus dashboard shows metrics in real-time
 - Can handle 1 failure gracefully (message replay, retry)
@@ -186,9 +205,11 @@ engineer-dojo/
 ---
 
 ### **04-Green-Belt 💚 (Week 8-10)**
+
 **Level**: Mid-level (Year 2-4)
 
 #### Lessons to Learn
+
 - Microservices architecture (service boundaries, communication)
 - Database design at scale (indexing, query optimization, connection pooling)
 - Distributed tracing (OpenTelemetry, Jaeger, correlation IDs)
@@ -196,6 +217,7 @@ engineer-dojo/
 - API gateway patterns and service discovery
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Design 1 bounded context (1x/week)
 - [ ] Add database index + explain query plan (2x/week)
 - [ ] Add distributed trace span to function (2x/week)
@@ -203,12 +225,14 @@ engineer-dojo/
 - [ ] Read 1 microservices pattern (2x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - 3-service microservices system (e.g., user + order + inventory)
 - API gateway routing to 2+ backend services
 - Event-sourcing proof of concept
 - Database sharding for 1M+ records
 
 #### Promotion Requirements
+
 - [ ] 2-3 independent services with clear boundaries
 - [ ] Services communicate via async (Kafka) or sync (REST/gRPC)
 - [ ] Distributed tracing works: can trace request across services
@@ -217,6 +241,7 @@ engineer-dojo/
 - [ ] README with architecture diagram
 
 #### Success Metrics
+
 - Trace a request through all 3 services in Jaeger
 - Each service has different database (microservices pattern)
 - Query latency < 50ms even with 1M+ records
@@ -226,9 +251,11 @@ engineer-dojo/
 ---
 
 ### **05-Blue-Belt 💙 (Month 3-4) → **First Job Transition**
+
 **Level**: Mid-level → Senior (Year 3-5)
 
 #### Lessons to Learn
+
 - System design and trade-offs (scalability, availability, consistency)
 - Caching strategies (cache-aside, write-through, cache invalidation)
 - Security fundamentals (auth, CORS, SQL injection, secrets management)
@@ -236,6 +263,7 @@ engineer-dojo/
 - Infrastructure as Code basics (Terraform, CloudFormation)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] System design challenge (2x/week) - design TinyURL, chat, etc.
 - [ ] Add caching to slow query (1x/week)
 - [ ] Design infrastructure for 100x growth (1x/week)
@@ -243,12 +271,14 @@ engineer-dojo/
 - [ ] Solve 2 security problems (2x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - Payment processing system (idempotency, webhook handling)
 - Real-time analytics dashboard (high-throughput writes)
 - Content delivery system (caching, CDN patterns)
 - Rate limiting at scale (distributed rate limiter)
 
 #### Promotion Requirements
+
 - [ ] Designed for scale: explain how it handles 10x traffic
 - [ ] Implements caching (Redis or similar) with clear strategy
 - [ ] Security: secrets not in code, auth working, basic CORS
@@ -257,6 +287,7 @@ engineer-dojo/
 - [ ] README with trade-offs: why this approach over others
 
 #### Success Metrics
+
 - System design interview: pass mock with peer/senior
 - Load tested at intended scale (explain results)
 - Can explain every design decision (why Redis not Memcached?)
@@ -266,9 +297,11 @@ engineer-dojo/
 ---
 
 ### **06-Brown-Belt 🤎 (Month 5-7)**
+
 **Level**: Senior (Year 4-6)
 
 #### Lessons to Learn
+
 - Advanced database patterns (sharding, replication, multi-region)
 - Distributed systems fundamentals (CAP theorem, consensus, eventual consistency)
 - API design at scale (versioning, deprecation, backwards compatibility)
@@ -276,6 +309,7 @@ engineer-dojo/
 - Resilience patterns (circuit breakers, bulkheads, retry strategies)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Read 1 distributed systems paper/blog (2x/week)
 - [ ] Shard a dataset (1x/week) - design, not implementation
 - [ ] Write design doc for new feature (1x/week)
@@ -283,12 +317,14 @@ engineer-dojo/
 - [ ] Add 1 resilience pattern (circuit breaker, bulkhead, etc.) (1x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - Sharded user service (100M+ users, hash-based sharding)
 - Multi-region architecture (active-active or active-passive)
 - Consensus system (Raft, Paxos, or simplified blockchain)
 - Event-sourcing system with CQRS
 
 #### Promotion Requirements
+
 - [ ] Handles sharding transparently (shard routing works)
 - [ ] Replication + failover: 1 node down doesn't break system
 - [ ] Distributed tracing shows all services involved
@@ -298,6 +334,7 @@ engineer-dojo/
 - [ ] README with lessons learned
 
 #### Success Metrics
+
 - Explain sharding strategy to peer: hash function, hot spots, scaling
 - System survives 1 node failure (verified with test)
 - Design doc answers: "What if 10x more traffic?"
@@ -307,9 +344,11 @@ engineer-dojo/
 ---
 
 ### **07-Black-Belt ⚫ (Month 8-13)**
+
 **Level**: Senior → Staff (Year 5-8)
 
 #### Lessons to Learn
+
 - Staff engineer responsibilities (tech roadmaps, architecture authority)
 - System design at organizational scale (multiple teams, platforms)
 - Technical communication (architecture decision records, RFCs)
@@ -317,6 +356,7 @@ engineer-dojo/
 - Building for operations (observability, deployment strategies, SRE mindset)
 
 #### Daily Exercises (15-25 min each)
+
 - [ ] Write 1 architecture decision record (1x/week)
 - [ ] Design system for different constraint (2x/week)
 - [ ] Review 2 junior's architecture decisions (2x/week)
@@ -324,12 +364,14 @@ engineer-dojo/
 - [ ] Plan technology migration (1x/week)
 
 #### Capstone Projects (Pick ONE)
+
 - Distributed ledger system (blockchain, consensus, Byzantine fault tolerance)
 - Real-time platform (chat, notifications, feeds - millions of users)
 - Highly available system (99.99%+ uptime, multiple regions)
 - Complex data processing system (streaming, batch, CQRS)
 
 #### Promotion Requirements
+
 - [ ] System design at massive scale (1M+ concurrent users)
 - [ ] Handles Byzantine failures (1+ malicious/broken nodes)
 - [ ] Multiple deployment strategies documented (blue-green, canary, etc.)
@@ -340,6 +382,7 @@ engineer-dojo/
 - [ ] README with performance benchmarks and trade-offs
 
 #### Success Metrics
+
 - Staff engineer interview: pass 1-2 with senior engineers
 - System survives chaos engineering test (intentional failures)
 - Architecture RFC approved by 2+ senior engineers
@@ -351,57 +394,67 @@ engineer-dojo/
 ## Dans: Post-Black Belt (Principal Engineer Track)
 
 ### **01-First-Dan (Shodan) 🎖️ (Month 13-18)**
+
 **Level**: Staff Engineer → Principal (Year 7-10)
 
 **Focus**: Technical Leadership at Organizational Level
 
 #### Key Responsibilities
+
 - Define technical strategy across multiple teams
 - Make infrastructure investment decisions
 - Establish architecture principles and patterns
 - Lead major platform initiatives
 
 #### Learning Areas
+
 - Technology strategy and roadmaps
 - Organizational design and scaling teams
 - Cost optimization at scale
 - Platform thinking (enabling other teams)
 
 #### Capstone
+
 - Design + lead implementation of 1 major platform (internal or customer-facing)
 - Write technology strategy document for 3-year period
 
 ---
 
 ### **02-Second-Dan (Nidan) 🎖️🎖️ (Month 18-24)**
+
 **Level**: Principal Engineer (Year 8-12)
 
 **Focus**: Industry and Community Leadership
 
 #### Key Responsibilities
+
 - Public speaking (conferences, company)
 - Open-source project leadership
 - Industry influence (standards, best practices)
 - Mentoring multiple teams across organization
 
 #### Learning Areas
+
 - Public speaking and communication
 - Building communities
 - Industry standards and RFCs
 - Organizational scaling
 
 #### Capstone
+
 - Publish 1 significant open-source project or 5+ technical articles
 - Speak at 1+ industry conference
 
 ---
 
 ### **03-Third-Dan (Sandan) 🎖️🎖️🎖️ (Month 24+)**
+
 **Level**: Principal Engineer / Distinguished Engineer (Year 10+)
 
 **Focus**: Industry Thought Leadership
 
 #### Key Responsibilities
+
 - Shape industry direction
 - Executive advisory on technical decisions
 - Talent attraction through reputation
@@ -412,11 +465,13 @@ engineer-dojo/
 ## Style Schools: Language/Tech-Specific
 
 These are **optional** and organized by belt level. Each style teaches:
+
 - How to apply belt concepts in THIS language/framework
 - Language-specific patterns and idioms
 - Tool ecosystem
 
 ### Structure for Each Style School
+
 ```
 style-schools/[language]/
 ├── README.md                         # Overview
@@ -434,6 +489,7 @@ style-schools/[language]/
 ### Initial Style Schools (Examples)
 
 #### **Ruby on Rails**
+
 - White: HTTP basics, REST conventions, MVC
 - Yellow: Migrations, validation, Active Record
 - Orange: Background jobs (Sidekiq), caching
@@ -442,6 +498,7 @@ style-schools/[language]/
 - Brown: Rails internals, metaprogramming, performance
 
 #### **Go**
+
 - White: goroutines, channels, HTTP package
 - Yellow: error handling, testing, interfaces
 - Orange: concurrency patterns, sync package
@@ -450,6 +507,7 @@ style-schools/[language]/
 - Brown: unsafe, runtime internals, performance tuning
 
 #### **React**
+
 - White: components, JSX, state
 - Yellow: hooks, testing (React Testing Library)
 - Orange: performance (memoization, lazy loading)
@@ -458,6 +516,7 @@ style-schools/[language]/
 - Brown: advanced patterns, library internals
 
 #### **PostgreSQL**
+
 - White: CRUD, SELECT, basic schema
 - Yellow: indexes, constraints, foreign keys
 - Orange: query optimization (EXPLAIN), transactions
@@ -466,6 +525,7 @@ style-schools/[language]/
 - Brown: internals, MVCC, tuning parameters
 
 #### **AWS**
+
 - White: EC2, S3, RDS basics
 - Yellow: IAM, security groups, CloudWatch
 - Orange: Lambda, SQS, auto-scaling
@@ -533,6 +593,7 @@ Each belt has a **checklist.md**:
 ## How to Use This Framework
 
 ### For Individual Learning
+
 1. Clone/fork this repo
 2. Start at 01-white-belt/
 3. Complete lessons → daily exercises → capstone
@@ -540,6 +601,7 @@ Each belt has a **checklist.md**:
 5. Move to next belt
 
 ### With AI Assistant (Copilot/Gemini)
+
 ```bash
 # Ask Copilot/Gemini to review your progress
 "I'm on white-belt. I completed the CRUD API.
@@ -554,6 +616,7 @@ I know Ruby and Go."
 ```
 
 ### For Teams
+
 1. Each engineer forks repo
 2. Tracks progress in `examples/[username]/progress.md`
 3. Team reviews capstone projects
@@ -565,6 +628,7 @@ I know Ruby and Go."
 ## File Templates
 
 ### lesson.md Template
+
 ```markdown
 # [Belt Name] - Lesson: [Topic]
 
@@ -589,6 +653,7 @@ Real-world scenario where this is critical
 ```
 
 ### projects.md Template
+
 ```markdown
 # [Belt Name] - Capstone Projects
 
