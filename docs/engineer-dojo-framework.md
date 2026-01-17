@@ -71,7 +71,9 @@ engineer-dojo/
 
 ---
 
-## Belt Progression (7 Core Belts + 3 Dans)
+## Belt Progression (8 Core Belts + 3 Dans)
+
+**New in 2026**: Added **05-Purple Belt** (Staff Engineer level) covering distributed systems, which opens the door to **Domain-Specific Niche Schools** (Fintech, AI/ML, Blockchain).
 
 ### **01-White-Belt 🕊️ (Week 1-2)**
 
@@ -682,6 +684,101 @@ Pick ONE project to graduate to next belt.
 
 ---
 
+## Purple Belt (05-purple-belt) - NEW
+
+**Level**: Staff Engineer (Year 5-6)  
+**Focus**: Distributed systems, large-scale architecture, foundational for niche schools
+
+This belt bridges from single-service architecture (Green Belt) to complex distributed systems. Required before specializing in Fintech, AI/ML, or Blockchain.
+
+### Coverage
+
+- Load balancing, caching, databases at scale
+- CAP theorem, consistency models, distributed transactions
+- Message queues, pub/sub, event-driven architecture
+- Monitoring, observability, reliability patterns
+- Microservices, search, real-time systems
+- Cost optimization, batch processing, deployment strategies
+
+### Projects (Pick ONE)
+
+1. **Design Twitter/X**: Scale to 500M users, 100M daily active
+2. **Design Uber/Lyft**: Real-time location tracking, matching algorithm
+3. **Design E-Commerce Platform**: Inventory, catalog search, checkout at scale
+4. **Design Messaging Platform**: Real-time delivery, offline queuing, encryption
+5. **Design Video Streaming**: Encoding pipelines, CDN strategy, recommendations
+6. **Design Trading Platform**: Order matching, real-time data, compliance
+7. **Design Content Delivery Network (CDN)**: Global edge servers, DDoS mitigation
+
+---
+
+## Niche Style Schools (NEW)
+
+With system design fundamentals mastered, specialize in high-value domains:
+
+### 💰 Fintech Engineering School
+
+**When to Start**: After 04-green-belt or concurrent with 05-purple-belt
+
+**Belts Offered**:
+- 03-orange-belt: Payment processing, fraud detection, regulatory basics
+- 04-green-belt: Settlement, reconciliation, compliance, high-volume transactions
+
+**Topics Covered**:
+- Payment processing (credit cards, ACH, wire, crypto)
+- Transaction atomicity and safety
+- Fraud detection and 3D Secure
+- PCI-DSS and regulatory compliance
+- Ledger systems and reconciliation
+- Settlement and payout operations
+
+**Why This Matters**: 
+Fintech is where correctness and compliance are non-negotiable. Building fintech systems develops the architectural thinking needed for all high-stakes systems.
+
+---
+
+### 🤖 AI/ML Systems Engineering School
+
+**When to Start**: After 04-green-belt or concurrent with 05-purple-belt
+
+**Belts Offered**:
+- 03-orange-belt: Model serving, feature engineering, experiment tracking
+- 04-green-belt: Real-time + batch inference, data pipelines, model monitoring
+
+**Topics Covered**:
+- Model serving and inference optimization
+- Feature engineering and feature stores
+- Experiment tracking and hyperparameter optimization
+- Real-time and batch prediction systems
+- Data pipelines and retraining automation
+- Model monitoring and drift detection
+
+**Why This Matters**: 
+With AI models handling increasingly critical decisions, the engineering infrastructure is more important than the models themselves. Learn to build systems that scale inference, keep models fresh, detect failures, and optimize costs.
+
+---
+
+### ⛓️ Blockchain Systems Engineering School
+
+**When to Start**: After 04-green-belt or concurrent with 05-purple-belt
+
+**Belts Offered**:
+- 03-orange-belt: Smart contracts, consensus basics, transaction models
+- 04-green-belt: Advanced smart contracts, DeFi protocols, cross-chain systems
+
+**Topics Covered**:
+- Blockchain fundamentals and consensus mechanisms
+- Smart contract development and security
+- UTXO vs Account transaction models
+- DeFi protocols (lending, AMM, staking)
+- Cross-chain bridges and interoperability
+- Privacy-preserving techniques (zero-knowledge proofs)
+
+**Why This Matters**: 
+Blockchain solves distributed systems problems differently than traditional systems. Learning both perspectives (trusted operator vs trustless) is crucial for the future of systems engineering.
+
+---
+
 ## Quick Start
 
 ```bash
@@ -709,25 +806,28 @@ git push
 git commit -m "🥋 White Belt: Ready for promotion"
 # Get code review from peer/senior
 # Move to 02-yellow-belt/
+
+# After 04-green-belt, choose your specialization:
+# - cd core-belts/05-purple-belt (required foundation)
+# - Then pick niche school:
+#   - style-schools/fintech
+#   - style-schools/ai-ml
+#   - style-schools/blockchain
 ```
 
 ---
 
 ## Next Steps to Build This
 
-1. **Create core belt files** (use these templates above)
-   - 01-white through 07-black: lessons.md, projects.md, daily-exercises.md, checklist.md
+1. **Core belts 01-07** are language-agnostic foundations
+2. **Purple belt (05)** bridges to specialization
+3. **Niche schools** (fintech, ai-ml, blockchain) for domain expertise
+4. **Technology schools** (Go, React, etc.) for language mastery
+5. **Dans** for post-black-belt principal engineer track
 
-2. **Create style school examples** (Ruby, Go, React, PostgreSQL, AWS)
-   - Each with belt-specific implementation guides
+This structure reflects the future of engineering: **AI generates code, engineers design systems**. Our niche schools teach the architectural thinking needed for high-stakes domains.
 
-3. **Create dan files** (01-first-dan through 03-third-dan)
-   - Focus areas, capstone ideas, success metrics
-
-4. **Create example progress directory**
-   - `examples/reference/progress.md` showing what tracking looks like
-
-This structure is **intentionally simple** and can be generated quickly. Use this guide with your AI assistant to fill in specific content for each belt.
+````
 
 ---
 

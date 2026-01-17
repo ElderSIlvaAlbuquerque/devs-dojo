@@ -1,6 +1,6 @@
 # Git Style School
 
-**Mastering Version Control Throughout Your Career**
+Mastering Version Control Throughout Your Career
 
 ---
 

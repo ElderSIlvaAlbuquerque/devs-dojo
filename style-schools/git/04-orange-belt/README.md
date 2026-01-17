@@ -113,7 +113,7 @@ git stash pop                   # Restore stashed changes
 
 **Core Ideas**:
 
-**1. What Happens During Rebase**
+#### 1. What Happens During Rebase
 
 ```bash
 Before rebase:
@@ -130,7 +130,7 @@ A---B---E---F  main
 # Original C and D still exist (temporarily) in reflog
 ```
 
-**2. Basic Rebase Workflow**
+#### 2. Basic Rebase Workflow
 
 ```bash
 # Update your feature branch with latest main
@@ -153,7 +153,7 @@ git rebase --continue
 git push --force-with-lease
 ```
 
-**3. Golden Rule of Rebase**
+#### 3. Golden Rule of Rebase
 
 ```
 ❌ NEVER rebase commits that exist on public/shared branches
@@ -185,7 +185,7 @@ Rebase keeps project history clean and linear, making it easier to understand wh
 
 **Core Ideas**:
 
-**1. Starting Interactive Rebase**
+#### 1. Starting Interactive Rebase
 
 ```bash
 # Rebase last 3 commits
@@ -195,7 +195,7 @@ git rebase -i HEAD~3
 git rebase -i main
 ```
 
-**2. Interactive Rebase Commands**
+#### 2. Interactive Rebase Commands
 
 ```
 pick   = keep commit as-is
@@ -206,7 +206,7 @@ fixup  = squash but discard commit message
 drop   = remove commit
 ```
 
-**3. Example: Cleaning Up History**
+#### 3. Example: Cleaning Up History
 
 ```bash
 # Your messy history:
@@ -233,7 +233,7 @@ squash jkl012 Add validation
 # Result: 1 clean commit instead of 4 messy ones
 ```
 
-**4. Practical Scenario: Squashing Before PR**
+#### 4. Practical Scenario: Squashing Before PR
 
 ```bash
 # You have 10 commits in your feature branch
@@ -263,7 +263,7 @@ Clean commit history makes code review easier and helps future developers unders
 
 **Core Ideas**:
 
-**1. Git Flow Branch Structure**
+#### 1. Git Flow Branch Structure
 
 ```
 main (production)
@@ -279,7 +279,7 @@ main (production)
   └── hotfix/critical-bug (emergency)
 ```
 
-**2. Feature Development Flow**
+#### 2. Feature Development Flow
 
 ```bash
 # Start feature from develop
@@ -297,7 +297,7 @@ git merge feature/new-dashboard
 git push origin develop
 ```
 
-**3. Release Flow**
+#### 3. Release Flow
 
 ```bash
 # Create release branch from develop
@@ -322,7 +322,7 @@ git push origin develop
 git branch -d release/v1.2.0
 ```
 
-**4. Hotfix Flow**
+#### 4. Hotfix Flow
 
 ```bash
 # Production is broken!
@@ -371,7 +371,7 @@ git branch -d hotfix/critical-payment-bug
 
 **Core Ideas**:
 
-**1. Trunk-Based Structure**
+#### 1. Trunk-Based Structure
 
 ```
 main (trunk) - always deployable
@@ -381,7 +381,7 @@ main (trunk) - always deployable
   └── feature/quick-change-3 (< 1 day)
 ```
 
-**2. Core Principles**
+#### 2. Core Principles
 
 ```
 1. All developers commit to main (trunk) daily
@@ -392,7 +392,7 @@ main (trunk) - always deployable
 6. Main is always deployable
 ```
 
-**3. Feature Flags Pattern**
+#### 3. Feature Flags Pattern
 
 ```javascript
 // Incomplete feature hidden behind flag
@@ -406,7 +406,7 @@ if (featureFlags.isEnabled("new-dashboard")) {
 // Toggle flag when ready
 ```
 
-**4. Workflow**
+#### 4. Workflow
 
 ```bash
 # Morning
@@ -459,14 +459,14 @@ git push
 
 **Core Ideas**:
 
-**1. What is Cherry-Pick?**
+#### 1. What is Cherry-Pick?
 
 ```
 Apply a specific commit from one branch to another
 WITHOUT merging the entire branch
 ```
 
-**2. When to Cherry-Pick**
+#### 2. When to Cherry-Pick
 
 ```
 ✅ Apply hotfix to multiple branches
@@ -475,7 +475,7 @@ WITHOUT merging the entire branch
 ❌ Regular feature development (use merge/rebase)
 ```
 
-**3. Basic Cherry-Pick**
+#### 3. Basic Cherry-Pick
 
 ```bash
 # You made a commit on wrong branch
@@ -490,7 +490,7 @@ git cherry-pick abc123
 # Commit abc123 now exists on both branches
 ```
 
-**4. Cherry-Pick Multiple Commits**
+#### 4. Cherry-Pick Multiple Commits
 
 ```bash
 # Apply commits def456, ghi789, jkl012
@@ -500,7 +500,7 @@ git cherry-pick def456 ghi789 jkl012
 git cherry-pick def456..jkl012
 ```
 
-**5. Real-World Scenario: Hotfix to Multiple Versions**
+#### 5. Real-World Scenario: Hotfix to Multiple Versions
 
 ```bash
 # Fixed bug in v2.0
@@ -548,7 +548,7 @@ git cherry-pick --abort
 
 **Core Ideas**:
 
-**1. What Are Git Hooks?**
+#### 1. What Are Git Hooks?
 
 ```
 Scripts that run automatically at Git events:
@@ -559,7 +559,7 @@ Scripts that run automatically at Git events:
 - etc.
 ```
 
-**2. Common Hooks**
+#### 2. Common Hooks
 
 ```
 pre-commit:  Run tests, lint code
@@ -568,7 +568,7 @@ pre-push:    Run full test suite
 post-merge:  Install dependencies
 ```
 
-**3. Creating a Hook**
+#### 3. Creating a Hook
 
 ```bash
 # Navigate to hooks directory
@@ -592,7 +592,7 @@ EOF
 chmod +x pre-commit
 ```
 
-**4. Using Husky (Team Hooks)**
+#### 4. Using Husky (Team Hooks)
 
 ```bash
 # Install Husky
@@ -610,7 +610,7 @@ npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 # Now all team members get same hooks
 ```
 
-**5. Practical Examples**
+#### 5. Practical Examples
 
 ```bash
 # Pre-commit: Check for console.log

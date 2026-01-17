@@ -10,7 +10,8 @@
 
 ### Core Ideas
 
-**1. The Problem Version Control Solves**
+#### 1. The Problem Version Control Solves
+
 Without version control:
 
 - "final_v2_ACTUAL_final.docx" naming chaos
@@ -18,12 +19,12 @@ Without version control:
 - Hard to collaborate without overwriting each other's work
 - No way to undo changes safely
 
-**2. Centralized vs Distributed**
+#### 2. Centralized vs Distributed
 
 - **Centralized** (SVN): One central server, everyone connects to it
 - **Distributed** (Git): Everyone has full history locally
 
-**3. Why Git Won**
+#### 3. Why Git Won
 
 - Fast (most operations are local)
 - Powerful branching and merging
@@ -52,14 +53,14 @@ Every professional software team uses version control. Understanding Git is as f
 
 ### Core Ideas
 
-**1. Initializing a Repository**
+#### 1. Initializing a Repository
 
 ```bash
 git init
 # Creates .git/ directory that stores all version history
 ```
 
-**2. The Three Trees**
+#### 2. The Three Trees
 
 ```
 Working Directory (where you edit)
@@ -69,7 +70,7 @@ Staging Area (what will be committed)
 Repository (permanent history)
 ```
 
-**3. Your First Commit**
+#### 3. Your First Commit
 
 ```bash
 echo "# My Project" > README.md
@@ -129,7 +130,7 @@ git log
 
 ### Core Ideas
 
-**1. Anatomy of a Good Commit Message**
+#### 1. Anatomy of a Good Commit Message
 
 ```
 <type>: <short summary>
@@ -148,10 +149,10 @@ git log
 - `test`: Adding or updating tests
 - `chore`: Maintenance (dependencies, build, etc.)
 
-**2. Why Messages Matter**
+#### 2. Why Messages Matter
 When debugging, you'll use `git log` to find when a bug was introduced. Good messages help you understand **why** changes were made.
 
-**3. Viewing History**
+#### 3. Viewing History
 
 ```bash
 git log                      # Full history
@@ -191,14 +192,15 @@ git log --oneline
 
 ### Core Ideas
 
-**1. What is a Branch?**
+#### 1. What is a Branch?
+
 A branch is a pointer to a commit. It lets you:
 
 - Work on features without affecting main code
 - Experiment safely
 - Collaborate without conflicts
 
-**2. Creating and Switching**
+#### 2. Creating and Switching
 
 ```bash
 git branch feature/new-api    # Create branch
@@ -207,8 +209,7 @@ git checkout feature/new-api  # Switch to it
 # Or in one command:
 git checkout -b feature/new-api
 ```
-
-**3. Merging**
+#### 3. Merging
 
 ```bash
 # Switch to branch you want to merge INTO
@@ -268,20 +269,20 @@ git log --graph --oneline --all
 
 ### Core Ideas
 
-**1. Viewing Unstaged Changes**
+#### 1. Viewing Unstaged Changes
 
 ```bash
 git diff              # Changes not yet staged
 git diff <file>       # Changes in specific file
 ```
 
-**2. Viewing Staged Changes**
+#### 2. Viewing Staged Changes
 
 ```bash
 git diff --staged     # Changes ready to commit
 ```
 
-**3. Comparing Commits**
+#### 3. Comparing Commits
 
 ```bash
 git diff HEAD~1 HEAD           # Last commit vs current
@@ -289,7 +290,7 @@ git diff abc123 def456         # Between two commits
 git diff main feature/new-api  # Between branches
 ```
 
-**4. Who Changed What**
+#### 4. Who Changed What
 
 ```bash
 git blame <file>      # Line-by-line authorship
@@ -334,21 +335,21 @@ git show HEAD
 
 ### Core Ideas
 
-**1. Unstaging Files**
+#### 1. Unstaging Files
 
 ```bash
 git restore --staged <file>   # Unstage file (Git 2.23+)
 git reset HEAD <file>          # Older Git versions
 ```
 
-**2. Discarding Changes**
+#### 2. Discarding Changes
 
 ```bash
 git restore <file>             # Discard changes (Git 2.23+)
 git checkout -- <file>         # Older Git versions
 ```
 
-**3. Amending Last Commit**
+#### 3. Amending Last Commit
 
 ```bash
 git commit --amend             # Edit last commit message
